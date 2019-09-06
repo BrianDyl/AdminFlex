@@ -17,6 +17,11 @@ body {
 img {
     max-width: 100%;
 }
+.no-menu.app {
+    .sidebar {
+        margin-left: -20rem;
+    }
+}
 
  .app { 
      display: flex;
@@ -40,7 +45,7 @@ img {
          padding-left: 1rem; 
          h1 {
              color: $white;
-         }
+         } 
          .desktop {
              display: none;
              @include desktop{
@@ -101,6 +106,7 @@ img {
      }
 
      .sidebar {
+         transition: margin-left .3s ease-out;
          flex: 0 0 20rem;
          background-color: $darkGray;
          color: $white;
@@ -207,9 +213,7 @@ img {
                 padding-left: 1rem;
                 font-weight: bold;
             }
-            #last-name, #address {
-                margin: 0 5px;
-            }
+         
             input[type='text'],
             textarea {
                 flex: 1;
